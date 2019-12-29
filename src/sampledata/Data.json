@@ -1,0 +1,26 @@
+{
+    "student": [
+        {
+            "id": "59443827",
+            "firstname": "Peter",
+            "lastname": "Doe",
+            "dob": "04/10/1998",
+            "phone": "9843392961",
+            "email": "p.doe@gmail.com",
+            "preferred": "email",
+            "street": "86 Revel Street",
+            "city": "Budhanilkantha",
+            "state": "Kathmandu",
+            "postcode": "44600",
+            "country": "Nepal",
+            "visatype": "Student",
+            "visaexpiry": "09/12/2023",
+            "countryofpassport": "Nepal",
+            "degree": "Engineering",
+            "degreelevel": "Bachelor",
+            "institution": "University of Kathmandu",
+            "completion": "02/11/2019",
+            "password": "jd1998"
+        }
+    ]
+}

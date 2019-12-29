@@ -4,6 +4,7 @@ import Contact from './Contact';
 import AusAd from './AusAd';
 import Process from './Process';
 import NavBar from '../navbar/NavBar';
+import Footer from '../footer/Footer';
 
 const Index = () => {
     return (
@@ -13,6 +14,7 @@ const Index = () => {
             <AusAd />
             <Process />
             <Contact />
+            <Footer />
         </div>
     )
 }

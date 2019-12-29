@@ -18,6 +18,8 @@ import {
     KeyboardDatePicker
 } from '@material-ui/pickers';
 import NavBar from '../navbar/NavBar';
+import Footer from '../footer/Footer';
+
 
 const useStyles = makeStyles(theme => ({
     header: {
@@ -177,6 +179,7 @@ const ApplicationForm = () => {
                     Submit
                 </Fab>
             </form>
+            <Footer />
         </div >
     )
 }

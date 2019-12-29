@@ -22,7 +22,7 @@ const Footer = () => {
         <div className={classes.footer}>
             <Typography className={classes.copyright} variant="body2" color="textSecondary">
                 {'Copyright © '}
-                <Link color="inherit" href="">
+                <Link color="inherit" href="/">
                     Find Education Hub
             </Link>{' '}
                 {new Date().getFullYear()}
