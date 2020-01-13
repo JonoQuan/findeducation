@@ -1,7 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import SydneyPic from '../../images/sydneypic.jpg';
-import Typography from '@material-ui/core/Typography';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import SydneyPic from '../../images/sydneypic.jpg'
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles(theme => ({
     ausAdDiv: {
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     txtHeading: {
         margin: theme.spacing(2)
     }
-}));
+}))
 
 const AusAd = () => {
     const classes = useStyles();
@@ -55,4 +55,4 @@ const AusAd = () => {
     )
 }
 
-export default AusAd;
+export default AusAd

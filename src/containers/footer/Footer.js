@@ -1,7 +1,17 @@
-import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import Link from '@material-ui/core/Link'
+import ListItem from '@material-ui/core/ListItem'
+import List from '@material-ui/core/List'
+import Grid from '@material-ui/core/Grid'
+import ListItemText from '@material-ui/core/ListItemText'
+import { makeStyles } from '@material-ui/core/styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faFacebookSquare, faInstagram, faYoutube
+} from '@fortawesome/free-brands-svg-icons'
+import Divider from '@material-ui/core/Divider'
+
 
 const useStyles = makeStyles(theme => ({
     footer: {
@@ -9,27 +19,85 @@ const useStyles = makeStyles(theme => ({
         alignItems: 'flex-end',
         justifyContent: 'center',
         backgroundColor: '#b0bec5',
-        minHeight: '100px'
+        minHeight: '100px',
+        padding: theme.spacing(2)
     },
     copyright: {
-        padding: theme.spacing(1)
+        padding: theme.spacing(2),
     }
-}));
+}))
+
+function ListItemLink(props) {
+    return <ListItem button component="a" {...props} />;
+}
 
 const Footer = () => {
     const classes = useStyles();
     return (
         <div className={classes.footer}>
-            <Typography className={classes.copyright} variant="body2" color="textSecondary">
-                {'Copyright © '}
-                <Link color="inherit" href="/">
-                    Find Education Hub
+            <Grid container
+                direction='column'
+                alignContent='space-between'>
+                <Grid container
+                    direction='row'
+                    justify='center'>
+                    <Grid item>
+                        <List aria-label="site-links">
+                            <ListItemLink href="#">
+                                <ListItemText primary="About Us" />
+                            </ListItemLink>
+                            <ListItemLink href="#">
+                                <ListItemText primary="Courses" />
+                            </ListItemLink>
+                            <ListItemLink href="#">
+                                <ListItemText primary="Training" />
+                            </ListItemLink>
+                            <ListItemLink href="#">
+                                <ListItemText primary="IELTS" />
+                            </ListItemLink>
+                        </List>
+                    </Grid>
+                    <Grid item>
+                        <Divider orientation="vertical" variant='middle' />
+                    </Grid>
+                    <Grid item>
+                        <List aria-label="site-links">
+                            <ListItem>
+                                <ListItemText primary="Head Office" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Bhairahawa, Nepal" />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemText primary="Follow Us" />
+                            </ListItem>
+                            <ListItem style={{ justifyContent: 'space-between' }}>
+                                <Link href='#' color='textPrimary'>
+                                    <FontAwesomeIcon component='a' href='#' icon={faFacebookSquare} size='2x' />{' '}
+                                </Link>
+                                <Link href='#' color='textPrimary'>
+                                    <FontAwesomeIcon icon={faInstagram} size='2x' />{' '}
+                                </Link>
+                                <Link href='#' color='textPrimary'>
+                                    <FontAwesomeIcon icon={faYoutube} size='2x' />
+                                </Link>
+                            </ListItem>
+                        </List>
+                    </Grid>
+                </Grid>
+                <Grid item>
+                    <Typography className={classes.copyright} variant="body2" color="textSecondary">
+                        {'Copyright © '}
+                        <Link color="inherit" href="/">
+                            Find Education Hub
             </Link>{' '}
-                {new Date().getFullYear()}
-                {'.'}
-            </Typography>
+                        {new Date().getFullYear()}
+                        {'.'}
+                    </Typography>
+                </Grid>
+            </Grid>
         </div>
     )
 }
 
-export default Footer;
+export default Footer

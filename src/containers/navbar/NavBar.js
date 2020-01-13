@@ -1,9 +1,9 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import Logo from '../../images/findEducationLogo.jpg';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import AppBar from '@material-ui/core/AppBar'
+import Toolbar from '@material-ui/core/Toolbar'
+import Button from '@material-ui/core/Button'
+import FindLogoName from '../../images/findlogoname.jpg'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -20,8 +20,8 @@ const useStyles = makeStyles(theme => ({
     },
     imgContainer: {
         flex: '1',
-        maxWidth: '100px',
-        marginLeft: theme.spacing(3)
+        maxWidth: '200px',
+        marginLeft: theme.spacing(4)
     },
     img: {
         width: '100%',
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
         borderRadius: '20px'
     }
-}));
+}))
 
 
 const NavBar = () => {
@@ -41,7 +41,7 @@ const NavBar = () => {
                 <div className={classes.imgContainer}>
                     <Button href="/" className={classes.btnLogo}>
                         <img
-                            src={Logo}
+                            src={FindLogoName}
                             className={classes.img}
                             alt='Find Education Hub Logo' />
                     </Button>

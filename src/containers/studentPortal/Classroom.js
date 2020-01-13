@@ -1,17 +1,16 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import WritingImg from '../../images/womanwritingpen.jpg';
-import BookImg from '../../images/bookwriting.jpg';
-import PersonWritingImg from '../../images/personwriting.jpg';
-import GroupConversing from '../../images/groupconversing.jpg';
-
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import Card from '@material-ui/core/Card'
+import CardActions from '@material-ui/core/CardActions'
+import CardContent from '@material-ui/core/CardContent'
+import CardMedia from '@material-ui/core/CardMedia'
+import Grid from '@material-ui/core/Grid'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import WritingImg from '../../images/womanwritingpen.jpg'
+import BookImg from '../../images/bookwriting.jpg'
+import PersonWritingImg from '../../images/personwriting.jpg'
+import GroupConversing from '../../images/groupconversing.jpg'
 
 const useStyles = makeStyles(theme => ({
     header: {
@@ -24,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     media: {
         height: 140,
     },
-}));
+}))
 
 const Classroom = () => {
     const classes = useStyles();
@@ -130,4 +129,4 @@ const Classroom = () => {
     )
 }
 
-export default Classroom;
+export default Classroom

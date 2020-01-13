@@ -1,7 +1,7 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Typography from '@material-ui/core/Typography';
+import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Typography from '@material-ui/core/Typography'
 import {
     faFileAlt,
     faArrowRight,
@@ -9,7 +9,7 @@ import {
     faEdit,
     faCheckCircle,
     faPlaneDeparture
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons'
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
         alignSelf: 'center',
         maxWidth: '50px'
     }
-}));
+}))
 
 const Process = () => {
     const classes = useStyles();
@@ -97,4 +97,4 @@ const Process = () => {
     )
 }
 
-export default Process;
+export default Process

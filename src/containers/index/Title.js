@@ -1,8 +1,8 @@
-import React from 'react';
-import WomanGrad from '../../images/womangraduationcap.jpg';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Fab from '@material-ui/core/Fab';
+import React from 'react'
+import WomanGrad from '../../images/womangraduationcap.jpg'
+import { makeStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import Fab from '@material-ui/core/Fab'
 
 
 const useStyles = makeStyles(theme => ({
@@ -32,10 +32,19 @@ const useStyles = makeStyles(theme => ({
     btnFindMore: {
         marginTop: theme.spacing(2)
     }
-}));
+}))
 
-const Title = () => {
+const handleClick = refs => {
+    refs.current.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+
+const Title = (props) => {
     const classes = useStyles();
+    const { refs } = props;
+
     return (
         <div className={classes.container}>
             <div className={classes.titleContainer}>
@@ -45,9 +54,13 @@ const Title = () => {
                 <Typography variant='h5'>
                     Invest in yourself and study abroad to receive quality education and an experience of a lifetime.
             </Typography>
-                <Fab  className={classes.btnFindMore} variant="extended" color='secondary'>
-                    Find out more
-                </Fab>
+                        <Fab
+                            className={classes.btnFindMore}
+                            variant="extended"
+                            color='secondary'
+                            onClick={()=>handleClick(refs)}>
+                            Find out more
+                        </Fab>
             </div>
             <div className={classes.imgContainer}>
                 <img
@@ -59,4 +72,4 @@ const Title = () => {
     )
 }
 
-export default Title;
+export default Title

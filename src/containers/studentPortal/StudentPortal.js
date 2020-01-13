@@ -1,36 +1,35 @@
-import React from 'react';
-import Profile from './Profile';
-import Classroom from './Classroom';
-import Dashboard from './Dashboard';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import PropTypes from 'prop-types';
-import Logo from '../../images/findEducationLogo.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faTabletAlt, faSignOutAlt, faThLarge } from '@fortawesome/free-solid-svg-icons';
+import React from 'react'
+import Profile from './Profile'
+import Classroom from './Classroom'
+import Dashboard from './Dashboard'
+import { makeStyles } from '@material-ui/core/styles'
+import Drawer from '@material-ui/core/Drawer'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import List from '@material-ui/core/List'
+import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import PropTypes from 'prop-types'
+import FindLogoName from '../../images/findlogoname.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser, faTabletAlt, faSignOutAlt, faThLarge } from '@fortawesome/free-solid-svg-icons'
 import {
     Link,
     useRouteMatch,
     Route
-} from "react-router-dom";
-import data from '../../sampledata/Data.json';
+} from "react-router-dom"
 
-const drawerWidth = 240;
+const drawerWidth = 240
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
     },
     imgContainer: {
-        maxWidth: '80px',
-        marginLeft: theme.spacing(3)
+        maxWidth: '200px',
+        marginLeft: theme.spacing(2)
     },
     img: {
         width: '100%',
@@ -45,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     content: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.default,
-        padding: theme.spacing(3),
+        padding: theme.spacing(3)
     },
     footer: {
         display: 'flex',
@@ -58,9 +57,9 @@ const useStyles = makeStyles(theme => ({
     copyright: {
         padding: theme.spacing(1)
     }
-}));
+}))
 
-function ListItemLink(props) {
+const ListItemLink = props => {
     const { icon, text, to } = props;
 
     const renderLink = React.useMemo(
@@ -69,7 +68,7 @@ function ListItemLink(props) {
                 <Link ref={ref} to={to} {...itemProps} />
             )),
         [to],
-    );
+    )
 
     return (
         <li>
@@ -78,14 +77,14 @@ function ListItemLink(props) {
                 <ListItemText primary={text} />
             </ListItem>
         </li>
-    );
+    )
 }
 
 ListItemLink.propTypes = {
     icon: PropTypes.object,
     text: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
-};
+}
 
 
 const StudentPortal = () => {
@@ -105,14 +104,14 @@ const StudentPortal = () => {
             >
                 <div className={classes.imgContainer}>
                     <img
-                        src={Logo}
+                        src={FindLogoName}
                         className={classes.img}
                         alt='Find Education Hub Logo' />
                 </div>
                 <Divider />
                 <List>
-                    <ListItemLink text="Dashboard" to={`${match.url}/dashboard`} icon={faThLarge} />
-                    <ListItemLink text="Profile" to={`${match.url}`} icon={faUser} />
+                    <ListItemLink text="Dashboard" to={`${match.url}`} icon={faThLarge} />
+                    <ListItemLink text="Profile" to={`${match.url}/profile`} icon={faUser} />
                     <ListItemLink text="Classroom" to={`${match.url}/classroom`} icon={faTabletAlt} />
                 </List>
                 <Divider />
@@ -128,12 +127,12 @@ const StudentPortal = () => {
                 </div>
             </Drawer>
             <main className={classes.content}>
-                <Route exact path={`${match.path}`}><Profile /></Route>
-                <Route exact path={`${match.path}/dashboard`}><Dashboard /></Route>
+                <Route exact path={`${match.path}`}><Dashboard /></Route>
+                <Route exact path={`${match.path}/profile`}><Profile /></Route>
                 <Route exact path={`${match.path}/classroom`}><Classroom /></Route>
             </main>
         </div>
     )
 }
 
-export default StudentPortal;
+export default StudentPortal

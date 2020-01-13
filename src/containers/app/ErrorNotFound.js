@@ -1,5 +1,5 @@
-import React from 'react';
-import { Typography } from '@material-ui/core';
+import React from 'react'
+import { Typography } from '@material-ui/core'
 
 const ErrorNotFound = () => {
     return (
@@ -14,4 +14,4 @@ const ErrorNotFound = () => {
     )
 }
 
-export default ErrorNotFound;
+export default ErrorNotFound

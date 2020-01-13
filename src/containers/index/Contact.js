@@ -1,9 +1,9 @@
-import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Fab from '@material-ui/core/Fab';
-import MailIcon from '@material-ui/icons/MailOutlined';
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import TextField from '@material-ui/core/TextField'
+import Fab from '@material-ui/core/Fab'
+import MailIcon from '@material-ui/icons/MailOutlined'
 
 const useStyles = makeStyles(theme => ({
     contactDiv: {
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
         marginLeft: theme.spacing(2),
         maxWidth: '100px'
     }
-}));
+}))
 
 const Contact = () => {
     const classes = useStyles();
@@ -85,4 +85,4 @@ const Contact = () => {
     )
 }
 
-export default Contact;
+export default Contact
